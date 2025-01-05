@@ -12,6 +12,7 @@ jobs:
     env:
       DOCKER_USERNAME: njavilas
       DOCKER_VERSION: 1.0.0
+      DOCKER_NAME: godev
 
     steps:
       - name: Checkout repository
@@ -25,8 +26,8 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t ${{ env.DOCKER_USERNAME }}/godev:${{ env.DOCKER_VERSION }} .
+          docker build -t ${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_NAME }}:${{ env.DOCKER_VERSION }} .
 
       - name: Push Docker Image
         run: |
-          docker push ${{ env.DOCKER_USERNAME }}/godev:${{ env.DOCKER_VERSION }}
+          docker push ${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_NAME }}:${{ env.DOCKER_VERSION }}
