@@ -8,7 +8,8 @@ ENV GO111MODULE=on \
     GOPATH=/go \
     PATH=$PATH:/usr/local/go/bin:/go/bin
 
-RUN apk update --no-cache && apk add --no-cache bash git gcc musl-dev curl make wget bash-completion openssh-client postgresql-client
+RUN apk update --no-cache && apk add --no-cache bash git gcc musl-dev curl make wget \ 
+    bash-completion openssh-client postgresql-client openssl
 
 ENV SHELL=/bin/bash
 
