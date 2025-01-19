@@ -20,3 +20,5 @@ RUN wget https://github.com/golangci/golangci-lint/releases/download/v1.62.2/gol
     mv golangci-lint-1.62.2-linux-amd64/golangci-lint /usr/local/bin
 
 RUN go install golang.org/x/tools/gopls@latest
+
+RUN go install github.com/air-verse/air@latest
