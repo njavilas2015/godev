@@ -25,10 +25,6 @@ RUN go install github.com/air-verse/air@latest
 
 WORKDIR /usr/src/app
 
-COPY go.mod go.mod
-
-COPY go.sum go.sum
-
-COPY Makefile Makefile
+COPY . .
 
 RUN make install
