@@ -23,6 +23,8 @@ RUN go install golang.org/x/tools/gopls@latest
 
 RUN go install github.com/air-verse/air@latest
 
+WORKDIR /usr/src/app
+
 COPY go.mod go.mod
 
 COPY go.sum go.sum
