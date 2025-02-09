@@ -19,6 +19,8 @@ RUN wget https://github.com/golangci/golangci-lint/releases/download/v1.62.2/gol
     tar -xzvf golangci-lint-1.62.2-linux-amd64.tar.gz && \
     mv golangci-lint-1.62.2-linux-amd64/golangci-lint /usr/local/bin
 
+WORKDIR /usr/src/app
+
 RUN go mod init gitlab.com/system/backend
 
 RUN go install github.com/air-verse/air@latest && \
