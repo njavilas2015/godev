@@ -5,3 +5,7 @@ build:
 
 push:
 	docker push $(IMAGE)
+
+install:
+	@echo "Limpiando y actualizando las dependencias..."
+	go mod tidy

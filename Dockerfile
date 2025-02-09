@@ -22,3 +22,11 @@ RUN wget https://github.com/golangci/golangci-lint/releases/download/v1.62.2/gol
 RUN go install golang.org/x/tools/gopls@latest
 
 RUN go install github.com/air-verse/air@latest
+
+COPY go.mod go.mod
+
+COPY go.sum go.sum
+
+COPY Makefile Makefile
+
+RUN make install
