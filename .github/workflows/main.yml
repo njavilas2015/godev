@@ -11,7 +11,7 @@ jobs:
 
     env:
       DOCKER_USERNAME: njavilas
-      DOCKER_VERSION: 1.0.4
+      DOCKER_VERSION: 1.0.5
       DOCKER_NAME: godev
 
     steps:
